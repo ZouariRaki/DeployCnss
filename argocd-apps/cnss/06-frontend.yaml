@@ -4,7 +4,7 @@ metadata:
   name: cnss-frontend
   namespace: cnss
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: cnss-frontend
