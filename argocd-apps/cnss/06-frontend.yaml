@@ -40,9 +40,14 @@ metadata:
   name: cnss-frontend-service
   namespace: cnss
 spec:
+  type: NodePort
   selector:
     app: cnss-frontend
   ports:
     - port: 80
+      targetPort: 80
+      nodePort: 30007 
+
+    
       targetPort: 80
   type: ClusterIP
