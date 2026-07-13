@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     # <-- Remplacez par l'URL de votre dépôt (ex: https://github.com/ZouariRaki/argocdDep.git)
-    repoURL: https://github.com/VOTRE_ORG/argocdDep.git
+    repoURL: https://github.com/ZouariRaki/DeployCnss.git
     targetRevision: main
     path: argocd-apps/cnss
   destination:
