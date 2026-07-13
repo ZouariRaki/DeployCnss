@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: cnss-frontend
-          image: yermanimohamed/cnss_frontend:1.0.0   # <-- ADAPTEZ à votre vraie image
+          image: yermanimohamed/cnss_frontend:1.0.3   # <-- ADAPTEZ à votre vraie image
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
