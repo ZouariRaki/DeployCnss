@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cnss-backend-config
+  namespace: cnss
+data:
+  SPRING_DATASOURCE_URL: "jdbc:mysql://mysql-service:3306/cnss3?useUnicode=true&useJDBCCompliantTimezoneShift=true&createDatabaseIfNotExist=true&useLegacyDatetimeCode=false&serverTimezone=UTC"
+  SPRING_DATASOURCE_USERNAME: "root"
+  SPRING_MAIL_HOST: "smtp.gmail.com"
+  SPRING_MAIL_PORT: "587"
+  SPRING_MAIL_USERNAME: "mohamedyermani5@gmail.com"
+  APP_BASE_URL: "http://cnss.local"
+  MINIO_URL: "http://minio-service:9000"
+  MINIO_ACCESS_KEY: "admin"
+  MINIO_BUCKET: "cnss-dossiers"
+  JWT_EXPIRATION: "86400000"
+  GROQ_API_URL: "https://api.groq.com/openai/v1/chat/completions"

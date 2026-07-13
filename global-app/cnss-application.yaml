@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cnss
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    # <-- Remplacez par l'URL de votre dépôt (ex: https://github.com/ZouariRaki/argocdDep.git)
+    repoURL: https://github.com/VOTRE_ORG/argocdDep.git
+    targetRevision: main
+    path: argocd-apps/cnss
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: cnss
+  syncPolicy:
+    automated:
+      prune: true       # supprime du cluster ce qui est retiré du Git
+      selfHeal: true     # annule les kubectl edit/apply manuels
+    syncOptions:
+      - CreateNamespace=true
